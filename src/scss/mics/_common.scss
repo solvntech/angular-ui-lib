@@ -1,0 +1,16 @@
+$color_hr: #00000026;
+
+hr {
+    width: 100%;
+    border-width: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 1px;
+    border-bottom: 2px solid $color_hr;
+
+    &.vertical {
+        width: 1px;
+        height: 100%;
+        margin-bottom: 0;
+    }
+}

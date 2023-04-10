@@ -1,0 +1,15 @@
+@use "sass:math";
+
+// Generate font size by rem (16px ~ 1rem)
+@function rem($px) {
+    @return math.div($px, 16) * 1rem;
+}
+
+@function encode_color($string) {
+    @if type-of($string) == 'color' {
+        $hex: str-slice(ie-hex-str($string), 4);
+        $string:unquote("#{$hex}");
+    }
+    $string: '%23' + $string;
+    @return $string;
+}
